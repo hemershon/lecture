@@ -16,7 +16,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_15_214937) do
 
   create_table "speeches", force: :cascade do |t|
     t.text "description"
-    t.time "time"
+    t.datetime "time"
     t.string "hour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
