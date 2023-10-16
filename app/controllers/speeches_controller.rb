@@ -3,7 +3,7 @@ class SpeechesController < ApplicationController
 
   # GET /speeches or /speeches.json
   def index
-    @speeches = Speech.order('time DESC').all
+    @speeches = Speech.all
   end
 
   # GET /speeches/1 or /speeches/1.json
