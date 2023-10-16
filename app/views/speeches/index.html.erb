@@ -6,9 +6,9 @@
   <% @speeches.each do |speech| %>
     <%= render speech %>
     <p>
-      <%= link_to "Show this speech", speech %>
+      <%= link_to "Show this speech", speech, class: "btn btn-secondary" %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New speech", new_speech_path %>
+<%= link_to "New speech", new_speech_path, class: "btn btn-primary" %>

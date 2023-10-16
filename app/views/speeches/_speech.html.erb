@@ -1,17 +1,18 @@
+<div class="card-group">
+    <div class="card-body">
 <div id="<%= dom_id speech %>">
-  <p>
-    <strong>Description:</strong>
-    <%= speech.description %>
-  </p>
-
-  <p>
-    <strong>Time:</strong>
-    <%= speech.time %>
-  </p>
-
-  <p>
-    <strong>Hour:</strong>
-    <%= speech.hour %>
-  </p>
-
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h3 class="card-title">Description</h3>
+    <p class="card-text"> <%= speech.description %></p>
+    <h3 class="card-title">Time</h3>
+    <p class="card-text"> <%= speech.time %></p>
+    <h3 class="card-title">Hour</h3>
+    <p class="card-text"> <%= speech.hour %></p>
+    <a href="#" class="btn btn-primary">Donwload</a>
+  </div>
+</div>
+</div>
+</div>
+</div>
 </div>
