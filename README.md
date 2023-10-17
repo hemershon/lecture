@@ -52,4 +52,5 @@ gem "image_processing", "~> 1.2"
 ```
 * API
 
-Como observei que o foco era API, nela foi criado as informações solicitadas no pdf, adicionei a lista de 
+Como observei que o foco era API, nela foi criado as informações solicitadas no pdf, adicionei a lista de palestras separada por dia 1 e dia 2
+juntamente com separando os periodos manhã e tarde com intervalo entre almoço e Network.
