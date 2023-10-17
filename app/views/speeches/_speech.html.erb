@@ -1,18 +1,23 @@
-<div class="card-group">
-    <div class="card-body">
-<div id="<%= dom_id speech %>">
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h3 class="card-title">Description</h3>
-    <p class="card-text"> <%= speech.description %></p>
-    <h3 class="card-title">Time</h3>
-    <p class="card-text"> <%= speech.time %></p>
-    <h3 class="card-title">Hour</h3>
-    <p class="card-text"> <%= speech.hour %></p>
-    <a href="#" class="btn btn-primary">Donwload</a>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 mb-3 mb-sm-0">
+      <div id="<%= dom_id speech %>">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+          
+            <h3 class="card-title">Description</h3>
+            <p class="card-text"> <%= speech.description %></p>
+            <h3 class="card-title">Time</h3>
+            <p class="card-text"> <%= speech.time %></p>
+            <h3 class="card-title">Hour</h3>
+            <p class="card-text"> <%= speech.hour %></p>
+            <a href="#" class="btn btn-primary">Download</a>
+            <%= link_to "Detalhes", speech, class: "btn btn-secondary" %>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-</div>
-</div>
+
 </div>

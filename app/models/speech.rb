@@ -1,4 +1,6 @@
 class Speech < ApplicationRecord
+  has_one_attached :upload
+  
   attribute :time, :datetime
   def start_time
     time.strftime("%H:%M:%S") if time.present?

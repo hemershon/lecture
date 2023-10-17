@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+ 
+
   <div>
     <%= form.label :description, style: "display: block" %>
     <%= form.input :description, as: :text %>
@@ -25,7 +27,8 @@
     <%= form.label :hour, style: "display: block" %>
     <%= form.input :hour %>
   </div>
-
+  <div><%= form.file_field :upload %></div>
+  <p>
   <div>
   <%= form.button :submit, class:"btn btn-primary" %>
   </div>
