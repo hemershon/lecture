@@ -11,9 +11,10 @@ class Speech < ApplicationRecord
   end
 
   def as_json(options = {})
-    super(options.merge(except: [:created_at, :updated_at]))
+    super(options.merge(except: [:created_at, :updated_at], methods: [:upload_url]))
   end
-  # def time
-  #   time.to_fs(:time)
-  # end
+  
+  def upload_url
+    upload.url if upload.attached?
+  end
 end

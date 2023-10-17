@@ -13,6 +13,10 @@ Rails.application.routes.draw do
     end
   end
 
+  if Rails.env.development?
+    get "/storage/*path" => "active_storage/disk#show"
+  end
+
   get 'speeches/day/1', to: 'speeches#day_one', as: 'day_one_speeches'
   get 'speeches/day/2', to: 'speeches#day_two', as: 'day_two_speeches'
   # Defines the root path route ("/")

@@ -57,20 +57,15 @@ class SpeechesController < ApplicationController
     end
   end
 
-  class SpeechesController < ApplicationController
-    # ... (outros métodos)
-  
     # GET /speeches/day/1
-    def day_one
-      @day_one_speeches = Speech.where("time >= ? AND time < ?", Date.parse('2023-10-16').beginning_of_day, Date.parse('2023-10-16').end_of_day)
-    end
-  
-    # GET /speeches/day/2
-    def day_two
-      @day_two_speeches = Speech.where("time >= ? AND time < ?", Date.parse('2023-10-17').beginning_of_day, Date.parse('2023-10-17').end_of_day)
-    end
+  def day_one
+    @day_one_speeches = Speech.where("time >= ? AND time < ?", Date.parse('2023-10-16').beginning_of_day, Date.parse('2023-10-16').end_of_day)
   end
   
+    # GET /speeches/day/2
+  def day_two
+    @day_two_speeches = Speech.where("time >= ? AND time < ?", Date.parse('2023-10-17').beginning_of_day, Date.parse('2023-10-17').end_of_day)
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -16,6 +16,10 @@ Rails.application.configure do
 
   # Enable server timing
   config.server_timing = true
+  # config/environments/development.rb (ou produção, dependendo do ambiente)
+  # config.active_storage.service = :local
+  # config.active_storage.url_options = { host: 'localhost:3000' } # Substitua 'your-host-name.com' pelo nome do host do seu aplicativo
+
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.

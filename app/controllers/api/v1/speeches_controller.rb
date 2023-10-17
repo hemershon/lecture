@@ -1,15 +1,15 @@
-# app/controllers/api/v1/speeches_controller.rb
 module Api
   module V1
     class SpeechesController < ApplicationController
       def index
-        @speeches = Speech.all # Supondo que você tenha um modelo Speech com informações das palestras
-      
-        # Define as datas dos dois dias do evento
+        @speeches = Speech.all 
+
+        ActiveStorage::Current.url_options = { host: request.base_url }
+
+   
         day_one_date = Date.parse('2023-10-16')
         day_two_date = Date.parse('2023-10-17')
-      
-        # Define horários de início da manhã e tarde
+
         morning_start_time = '09:00:00'
         afternoon_start_time = '13:00:00'
       
@@ -51,19 +51,19 @@ module Api
       private
 
       def day_one_date
-        Date.parse('2023-10-16') # Defina a data do primeiro dia do evento
+        Date.parse('2023-10-16') 
       end
 
       def day_two_date
-        Date.parse('2023-10-17') # Defina a data do segundo dia do evento
+        Date.parse('2023-10-17') 
       end
 
       def morning_start_time
-        '09:00:00' # Defina o horário de início da manhã
+        '09:00:00' 
       end
 
       def afternoon_start_time
-        '13:00:00' # Defina o horário de início da tarde
+        '13:00:00' 
       end
     end
   end
