@@ -1,10 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<h1>Detalhes da Palestra</h1>
 
-<%= render @speech %>
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">Descrição</h3>
+    <p class="card-text"><%= @speech.description %></p>
 
-<div>
-  <%= link_to "Edit this speech", edit_speech_path(@speech), class:"btn btn-secondary"  %>
-  <%= link_to "Back to speeches", speeches_path, class:"btn btn-dark"  %>
+    <h3 class="card-title">Data</h3>
+    <p class="card-text"><%= @speech.time.strftime("%Y-%m-%d") %></p>
 
-  <%= button_to "Destroy this speech", @speech, method: :delete, class:"btn btn-danger" %>
+    <h3 class="card-title">Hora</h3>
+    <p class="card-text"><%= @speech.hour %></p>
+    <% if @speech.upload.attached? %>
+    <p> <%= link_to 'Baixar Arquivo', rails_blob_path(@speech.upload, disposition: 'attachment'), class: "btn btn-success"%></p>
+    <% end %>
+
+    <%= link_to "Voltar à Lista", speeches_path, class: "btn btn-secondary" %>
+  </div>
 </div>

@@ -1,14 +1,35 @@
-<p style="color: green"><%= notice %></p>
+<h1>Lista de Palestras</h1>
 
-<h1>Speeches</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Descrição</th>
+      <th>Data</th>
+      <th>Hora</th>
+      <th>Tempo</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @speeches.each do |speech| %>
+      <tr>
+        <td><%= speech.description %></td>
+        <td><%= speech.time ? speech.time.strftime("%Y-%m-%d") : "Data não disponível" %></td>
+        <td><%= speech.time ? speech.time.strftime("%H:%M:%S") : "Hora não disponível" %></td>
+        <td><%= speech.hour %></td>
+        <td>
+          <%= link_to "Detalhes", speech, class: "btn btn-primary" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 
-<div id="speeches">
-  <% @speeches.each do |speech| %>
-    <%= render speech %>
-    <p>
-      <%= link_to "Show this speech", speech, class: "btn btn-secondary" %>
-    </p>
-  <% end %>
+</table>
+
+<div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col">
+    <%= link_to "Cadastrar palestra", new_speech_path, class: "btn btn-primary" %>
+    </div>
+  </div>
 </div>
-
-<%= link_to "New speech", new_speech_path, class: "btn btn-primary" %>

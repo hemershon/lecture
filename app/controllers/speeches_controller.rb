@@ -3,7 +3,7 @@ class SpeechesController < ApplicationController
 
   # GET /speeches or /speeches.json
   def index
-    @speeches = Speech.all
+    @speeches = Speech.order('time ASC').all
   end
 
   # GET /speeches/1 or /speeches/1.json
@@ -57,6 +57,21 @@ class SpeechesController < ApplicationController
     end
   end
 
+  class SpeechesController < ApplicationController
+    # ... (outros métodos)
+  
+    # GET /speeches/day/1
+    def day_one
+      @day_one_speeches = Speech.where("time >= ? AND time < ?", Date.parse('2023-10-16').beginning_of_day, Date.parse('2023-10-16').end_of_day)
+    end
+  
+    # GET /speeches/day/2
+    def day_two
+      @day_two_speeches = Speech.where("time >= ? AND time < ?", Date.parse('2023-10-17').beginning_of_day, Date.parse('2023-10-17').end_of_day)
+    end
+  end
+  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_speech
@@ -65,6 +80,6 @@ class SpeechesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def speech_params
-      params.require(:speech).permit(:description, :time, :hour)
+      params.require(:speech).permit(:description, :time, :hour, :upload)
     end
 end
