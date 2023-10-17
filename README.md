@@ -50,3 +50,5 @@ gem "image_processing", "~> 1.2"
 
 Como observei que o foco era API, nela foi criado as informações solicitadas no pdf, adicionei a lista de palestras separada por dia 1 e dia 2
 juntamente com separando os periodos manhã e tarde com intervalo entre almoço e Network.
+
+Sobre upload de arquivo, como foi adicionado as informações via seed o ideal é editar a palestra e adicionar o arquivo, ou se preferir criar uma nova palestra já adicionando o arquivo.
