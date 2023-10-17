@@ -1,9 +1,5 @@
 # Sistema para gerenciar palestras
 
-<<<<<<< HEAD
-* Ruby version
-=======
->>>>>>> feat/add_image_processing
 
 ```ruby
 3.0.2
