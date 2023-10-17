@@ -17,7 +17,7 @@ class SpeechesTest < ApplicationSystemTestCase
     fill_in "Description", with: @speech.description
     fill_in "Hour", with: @speech.hour
     fill_in "Time", with: @speech.time
-    click_on "Create Speech"
+    click_on "Criando uma nova palestra"
 
     assert_text "Speech was successfully created"
     click_on "Back"
